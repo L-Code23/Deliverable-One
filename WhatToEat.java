@@ -14,17 +14,17 @@ int candyrestock = 40;
 int stock;
 int restock;
 
-	System.out.println("How many sodas have been sold today? 100 in stock");
+	System.out.println("How many sodas have been sold today? There are " + sodastock + " in stock. ");
 		stock = scnr.nextInt();
 		sodarestock = sodastock - stock;
 		
 	if (sodarestock >= 0) {	
 	System.out.println("There are " + sodarestock + " sodas left." ); 
-	}
+	} // I see what you are saying about using variables instead of hard coding a number
 		if (sodarestock > 100) {
 	System.out.println("Too high, don't adjust the stock");
 	} 
-	System.out.println("How many chips have been sold today? 40 are in stock.");
+	System.out.println("How many chips have been sold today? There are " + chipstock + " in stock.");
 		stock = scnr.nextInt();
 		chiprestock = chipstock - stock;
 		if (chiprestock >=0) {
@@ -35,7 +35,7 @@ int restock;
 		if (chiprestock > 40) {
 	System.out.println("Too high. Don't restock");
 		}
-	System.out.println("How many candies have been sold today? 60 are in stock");
+	System.out.println("How many candies have been sold today? There are " + candystock + " in stock");
 			stock = scnr.nextInt();
 			candyrestock = candystock - stock;
 			if (candyrestock >=0) {
@@ -50,7 +50,7 @@ int restock;
 		}
 	System.out.println("Thank you for filling out the values. Here is what needs to be restocked");
 			
-	if (sodarestock <= 60) {
+	if (sodarestock <= 40) {
 	System.out.println("Soda needs to be restocked.");
 	}
 			
