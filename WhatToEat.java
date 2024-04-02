@@ -12,37 +12,37 @@ int sodarestock = 40;
 int chiprestock = 20;
 int candyrestock = 40;
 int stock;
-int restock;
+int sold;
 
 	System.out.println("How many sodas have been sold today? There are " + sodastock + " in stock. ");
-		stock = scnr.nextInt();
-		sodarestock = sodastock - stock;
+		sold = scnr.nextInt();
+		stock = sodastock - sold;
 		
-	if (sodarestock >= 0) {	
-	System.out.println("There are " + sodarestock + " sodas left." ); 
+	if (stock <= sodastock) {	
+	System.out.println("There are " + stock + " sodas left." ); 
 	} // I see what you are saying about using variables instead of hard coding a number
-		if (sodarestock > 100) {
+		if (stock > sodastock) {
 	System.out.println("Too high, don't adjust the stock");
 	} 
 	System.out.println("How many chips have been sold today? There are " + chipstock + " in stock.");
-		stock = scnr.nextInt();
-		chiprestock = chipstock - stock;
-		if (chiprestock >=0) {
+		sold = scnr.nextInt();
+		stock = chipstock - sold;
+		if (stock <= chipstock) {
 	
-			System.out.println("There are "+ chiprestock + " Chips left.");
+			System.out.println("There are "+ stock + " Chips left.");
 		}
 		
-		if (chiprestock > 40) {
+		if (stock > chipstock) {
 	System.out.println("Too high. Don't restock");
 		}
-	System.out.println("How many candies have been sold today? There are " + candystock + " in stock");
-			stock = scnr.nextInt();
-			candyrestock = candystock - stock;
-			if (candyrestock >=0) {
+	System.out.println("How many candies have been sold today? There are " + stock + " in stock");
+			sold = scnr.nextInt();
+			stock = candystock - sold;
+			if (stock <= candyrestock) {
 	
 				System.out.println("There are " + candyrestock + " candies left.");
 			}
-			if (candyrestock > 60) {
+			if (stock > candystock) {
 	System.out.println("Too high. Don't restock");
 				
 				
@@ -50,16 +50,16 @@ int restock;
 		}
 	System.out.println("Thank you for filling out the values. Here is what needs to be restocked");
 			
-	if (sodarestock <= 40) {
+	if (stock <= sodarestock) {
 	System.out.println("Soda needs to be restocked.");
 	}
 			
-	if(chiprestock <= 20) {
-	System.out.println("Chips need to be restocked.");
+	if(stock <= chiprestock) {
+	System.out.println("Chips needs to be restocked.");
 	}
 			
-	if(candyrestock <= 40) {
-	System.out.println ("Candy need to be restocked.");
+	if(stock <= candyrestock) {
+	System.out.println ("Candy needs to be restocked.");
 		}  
 	
 			
